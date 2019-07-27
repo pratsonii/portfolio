@@ -22,7 +22,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RegistrationComponent } from "./components/registration/registration.component";
 import { StoreModule } from "@ngrx/store";
-import { registerReducer } from "./components/registration/register.reducer";
+import * as fromReducer from "./components/registration/register.reducer";
 
 const icons: IconDefinition[] = [DownloadOutline, StarFill];
 @NgModule({
@@ -43,7 +43,7 @@ const icons: IconDefinition[] = [DownloadOutline, StarFill];
     FormsModule,
     ReactiveFormsModule,
     NzDividerModule,
-    StoreModule.forRoot({ count: registerReducer })
+    StoreModule.forRoot({ count: fromReducer.reducer })
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

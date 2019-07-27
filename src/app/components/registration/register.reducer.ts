@@ -1,4 +1,4 @@
-import { createReducer, on } from "@ngrx/store";
+import { createReducer, on, Action, State } from "@ngrx/store";
 import { register } from "./register.actions";
 import { User } from "src/app/interface/user";
 
@@ -11,3 +11,9 @@ export const registerReducer = createReducer(
     return state;
   })
 );
+
+//This function is very imp. if we dont add this we could not build using
+// ng build --prod
+export function reducer(state: User[] | undefined, action: Action) {
+  return registerReducer(state, action);
+}
