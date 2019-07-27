@@ -1,0 +1,19 @@
+.container {
+  width: 60%;
+  margin: 1% auto;
+}
+
+.ant-btn {
+  font-weight: 700;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container>button {
+  margin-right: 16px;
+  margin-top: 12px;
+}
