@@ -1,3 +1,4 @@
+import { UserIpDetailsService } from "./../../services/user-ip-details.service";
 import { select } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
   loggedIn: boolean = false;
   userName: string;
   users$: Observable<User[]>;
+  location: string;
 
   submitForm(): void {
     for (const i in this.validateForm.controls) {
@@ -62,7 +64,8 @@ export class LoginComponent implements OnInit {
     private backNav: BackNavigationService,
     private router: Router,
     private store: Store<User[]>,
-    private message: NzMessageService
+    private message: NzMessageService,
+    private userIpDetails: UserIpDetailsService
   ) {
     this.users$ = store.pipe(select("count"));
   }
@@ -75,9 +78,13 @@ export class LoginComponent implements OnInit {
     });
 
     this.backNav.changeNavigation({
-      route: "buttonPanel",
+      route: "buttons",
       routeParam: "demo",
       show: true
+    });
+
+    this.userIpDetails.getUserIpDetails().subscribe(data => {
+      this.location = data.city + ", " + data.state + ", " + data.country;
     });
   }
 

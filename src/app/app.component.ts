@@ -1,7 +1,6 @@
 import { BackNav } from "./interface/back-nav";
 import { BackNavigationService } from "./services/back-navigation.service";
-import { Router } from "@angular/router";
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { RoutingService } from "./services/routing.service";
 @Component({
   selector: "app-root",

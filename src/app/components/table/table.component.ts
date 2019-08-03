@@ -19,7 +19,7 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     console.log("on init");
     this.backNav.changeNavigation({
-      route: "buttonPanel",
+      route: "buttons",
       routeParam: "demo",
       show: true
     });

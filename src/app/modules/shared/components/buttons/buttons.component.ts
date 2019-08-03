@@ -1,15 +1,15 @@
-import { BackNav } from "./../../interface/back-nav";
-import { BackNavigationService } from "./../../services/back-navigation.service";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Routes } from "./../../../../constants/routes";
+import { ActivatedRoute } from "@angular/router";
+import { BackNavigationService } from "./../../../../services/back-navigation.service";
+import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
-import { Routes } from "src/app/constants/routes";
 
 @Component({
-  selector: "app-buttons-panel",
-  templateUrl: "./buttons-panel.component.html",
-  styleUrls: ["./buttons-panel.component.scss"]
+  selector: "app-buttons",
+  templateUrl: "./buttons.component.html",
+  styleUrls: ["./buttons.component.scss"]
 })
-export class ButtonsPanelComponent implements OnInit {
+export class ButtonsComponent implements OnInit {
   constructor(
     private router: Router,
     private backNav: BackNavigationService,

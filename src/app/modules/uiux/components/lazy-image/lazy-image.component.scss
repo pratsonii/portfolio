@@ -1,0 +1,16 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Nunito';
+  color: white;
+}
+
+.card {
+  background: radial-gradient(circle at var(--x) var(--y), #5de7ff 0%, #0092ec 100%);
+  border-radius: 15px;
+  padding: 1em 2em;
+  width: 40%;
+  height: 60%;
+}

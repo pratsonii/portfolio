@@ -1,7 +1,6 @@
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { TableComponent } from "./components/table/table.component";
-import { ButtonsPanelComponent } from "./components/buttons-panel/buttons-panel.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { RegistrationComponent } from "./components/registration/registration.component";
@@ -12,8 +11,9 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "buttonPanel/:id",
-    component: ButtonsPanelComponent
+    path: "buttons",
+    loadChildren: () =>
+      import("../app/modules/shared/shared.module").then(m => m.SharedModule)
   },
   {
     path: "table",

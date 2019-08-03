@@ -1,21 +1,21 @@
-import { UserIp } from "./../../models/user-ip";
-import { map, flatMap } from "rxjs/operators";
-import { Observable } from "rxjs";
+import { UserIp } from "./../models/user-ip";
 import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
-@Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"]
+
+import { map, flatMap } from "rxjs/operators";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+
+@Injectable({
+  providedIn: "root"
 })
-export class HomeComponent implements OnInit {
+export class UserIpDetailsService {
   ipUrl: string = "https://api.ipify.org/?format=json";
+
+  userIpDetailsResponse: any;
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {
-    this.getIp()
-      .pipe(flatMap(data => this.getIpDetails(data)))
-      .subscribe(console.log);
+  getUserIpDetails(): Observable<UserIp> {
+    return this.getIp().pipe(flatMap(data => this.getIpDetails(data)));
   }
 
   getIp(): Observable<string> {
