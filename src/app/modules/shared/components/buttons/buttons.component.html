@@ -1,6 +1,6 @@
 <div class="container">
   <div class="flex-container">
-    <button nz-button nzShape="round" nzType="dashed" *ngFor="let path of paths"
+    <button title={{path.title}} nz-button nzShape="round" nzType="dashed" *ngFor="let path of paths"
       (click)="redirect(path.path)">{{path.name}}</button>
   </div>
 </div>

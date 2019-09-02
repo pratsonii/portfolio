@@ -1,4 +1,5 @@
-import { BackNavigationService } from "./../../services/back-navigation.service";
+import { BackNavigationService } from "./../../../../services/back-navigation.service";
+
 import { Component, OnInit, OnChanges } from "@angular/core";
 import { TableService } from "./table.service";
 import { Observable, empty } from "rxjs";

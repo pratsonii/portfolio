@@ -1,5 +1,6 @@
+import { LazyImageComponent } from "./components/dynamic-cursor/lazy-image.component";
+import { TableComponent } from "./components/table/table.component";
 import { ButtonsComponent } from "./../shared/components/buttons/buttons.component";
-import { LazyImageComponent } from "./components/lazy-image/lazy-image.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
@@ -7,6 +8,10 @@ const routes: Routes = [
   {
     path: "lazyImage",
     component: LazyImageComponent
+  },
+  {
+    path: "table",
+    component: TableComponent
   },
   {
     path: "buttons/:id",
