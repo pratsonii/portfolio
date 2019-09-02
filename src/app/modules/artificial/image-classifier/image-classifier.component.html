@@ -1,0 +1,32 @@
+<div class="center">
+  <div>
+    <nz-upload nzType="drag" [nzMultiple]="false" nzAction="https://jsonplaceholder.typicode.com/posts/"
+      (nzChange)="fileChangeEvent($event)" [nzShowUploadList]="false">
+      <p class="ant-upload-drag-icon">
+        <i nz-icon nzType="inbox"></i>
+      </p>
+      <p class="ant-upload-text">Click or drag file to this area to upload</p>
+    </nz-upload>
+  </div>
+
+</div>
+
+<div class="grid-container" *ngIf="imageSrc">
+  <div class="img">
+    <img [src]="imageSrc" #img width="400" height="300" />
+  </div>
+
+  <nz-list [nzDataSource]="predictions" nzBordered nzSize="small" [nzHeader]="title" [nzRenderItem]="smallItem">
+    <ng-template #smallItem let-item>
+      <h3>
+        <nz-list-item [nzContent]="item.className"></nz-list-item>
+      </h3>
+    </ng-template>
+
+    <ng-template #title>
+      <h2>
+        Top 3 Prediction
+      </h2>
+    </ng-template>
+  </nz-list>
+</div>

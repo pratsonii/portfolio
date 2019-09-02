@@ -1,0 +1,19 @@
+.center {
+  width: 30%;
+  margin: 30px auto;
+  box-shadow: 1px 1px 2px 1px rgb(128, 128, 128);
+}
+
+.img {
+  margin-top: 4px;
+  height: 300px;
+  width: 300px;
+}
+
+.grid-container {
+  width: 60%;
+  margin: 20px auto;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+}

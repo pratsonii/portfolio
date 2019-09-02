@@ -31,6 +31,13 @@ const routes: Routes = [
     path: "uiux",
     loadChildren: () =>
       import("../app/modules/uiux/uiux.module").then(m => m.UiuxModule)
+  },
+  {
+    path: "artificial",
+    loadChildren: () =>
+      import("../app/modules/artificial/artificial.module").then(
+        m => m.ArtificialModule
+      )
   }
 ];
 
