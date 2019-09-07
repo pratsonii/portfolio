@@ -1,3 +1,4 @@
+import { AnimationLaxComponent } from "./components/animation-lax/animation-lax.component";
 import { LazyImageComponent } from "./components/dynamic-cursor/lazy-image.component";
 import { TableComponent } from "./components/table/table.component";
 import { ButtonsComponent } from "./../shared/components/buttons/buttons.component";
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "buttons/:id",
     component: ButtonsComponent
+  },
+  {
+    path: "animate",
+    component: AnimationLaxComponent
   }
 ];
 
