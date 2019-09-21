@@ -1,0 +1,31 @@
+.container {
+  padding: 0 20%;
+  font-size: 24px;
+}
+
+section {
+  height: 70vh;
+}
+
+h1 {
+  margin-top: 3em;
+  font-size: 3rem;
+}
+
+img {
+  opacity: 0;
+  transition: opacity 1s;
+  margin-bottom: 4em;
+  border-radius: 25px;
+}
+
+.reveal {
+  opacity: 1;
+}
+
+.image {
+  height: 100vh;
+  margin: 0%;
+  padding-left: 15%;
+  margin-bottom: 4em;
+}

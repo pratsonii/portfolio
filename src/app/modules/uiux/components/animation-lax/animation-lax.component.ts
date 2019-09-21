@@ -20,21 +20,7 @@ export class AnimationLaxComponent implements OnInit, AfterViewInit {
 
     window.requestAnimationFrame(updateLax);
   }
-  constructor() {
-    console.log("Constructor");
-    window.onload = function() {
-      console.log("On load");
-      lax.setup(); // init
-      console.log(lax);
-      const updateLax = () => {
-        console.log(window.scrollY);
-        lax.update(window.scrollY);
-        window.requestAnimationFrame(updateLax);
-      };
-
-      window.requestAnimationFrame(updateLax);
-    };
-  }
+  constructor() {}
 
   ngOnInit() {
     console.log(window.scrollY);

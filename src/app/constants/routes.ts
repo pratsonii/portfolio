@@ -15,16 +15,21 @@ export class Routes {
 
   static readonly uiux = [
     {
-      name: "Dynamic CSS",
-      path: "uiux/lazyImage",
-      title: "Dynamic CSS on cursor hover"
-    },
-    { name: "Table", path: "uiux/table", title: "Table using Ant design" },
-    {
       name: "Animation on Scroll",
       path: "uiux/animate",
       title: "Animation using Laxx.js"
-    }
+    },
+    {
+      name: "Dynamic CSS",
+      path: "uiux/dynamicCursor",
+      title: "Dynamic CSS on cursor hover"
+    },
+    {
+      name: "Lazy Image",
+      path: "uiux/lazyImage",
+      title: "Loads images on scrolling"
+    },
+    { name: "Table", path: "uiux/table", title: "Table using Ant design" }
   ];
 
   static readonly artificial = [

@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "app-lazy-image",
-  templateUrl: "./lazy-image.component.html",
-  styleUrls: ["./lazy-image.component.scss"]
+  selector: "app-dynamic-cursor",
+  templateUrl: "./dynamic-cursor.component.html",
+  styleUrls: ["./dynamic-cursor.component.scss"]
 })
-export class LazyImageComponent implements OnInit, AfterViewInit {
+export class DynamicCursorComponent implements OnInit, AfterViewInit {
   @ViewChild("myDiv", { static: false }) myDiv: ElementRef;
 
   ngAfterViewInit(): void {
