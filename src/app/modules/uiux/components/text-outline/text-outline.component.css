@@ -1,0 +1,28 @@
+img {
+  z-index: 0;
+  display: block;
+  margin: 6rem auto 12rem auto;
+}
+
+h1 {
+  font-size: 8rem;
+  color: black;
+  z-index: -1;
+}
+
+.first-line {
+  position: absolute;
+  top: 8rem;
+}
+
+.second-line {
+  position: absolute;
+  top: 24rem;
+  right: 0;
+}
+
+.stroke {
+  z-index: 1;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+}

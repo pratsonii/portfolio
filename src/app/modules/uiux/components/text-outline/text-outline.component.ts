@@ -1,13 +1,12 @@
 import { Component, OnInit, AfterViewInit } from "@angular/core";
 
 declare var lax: any;
-
 @Component({
-  selector: "app-animation-lax",
-  templateUrl: "./animation-lax.component.html",
-  styleUrls: ["./animation-lax.component.scss"],
+  selector: "app-text-outline",
+  templateUrl: "./text-outline.component.html",
+  styleUrls: ["./text-outline.component.css"],
 })
-export class AnimationLaxComponent implements OnInit, AfterViewInit {
+export class TextOutlineComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     lax.setup(); // init
     const updateLax = () => {
@@ -19,8 +18,4 @@ export class AnimationLaxComponent implements OnInit, AfterViewInit {
     window.requestAnimationFrame(updateLax);
   }
   constructor() {}
-
-  ngOnInit() {
-    console.log(window.scrollY);
-  }
 }

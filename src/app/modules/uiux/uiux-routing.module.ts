@@ -1,3 +1,4 @@
+import { TextOutlineComponent } from "./components/text-outline/text-outline.component";
 import { LazyImageComponent } from "./components/lazy-image/lazy-image.component";
 import { AnimationLaxComponent } from "./components/animation-lax/animation-lax.component";
 import { TableComponent } from "./components/table/table.component";
@@ -9,28 +10,32 @@ import { DynamicCursorComponent } from "./components/dynamic-cursor/lazy-image.c
 const routes: Routes = [
   {
     path: "lazyImage",
-    component: LazyImageComponent
+    component: LazyImageComponent,
   },
   {
     path: "dynamicCursor",
-    component: DynamicCursorComponent
+    component: DynamicCursorComponent,
   },
   {
     path: "table",
-    component: TableComponent
+    component: TableComponent,
   },
   {
     path: "buttons/:id",
-    component: ButtonsComponent
+    component: ButtonsComponent,
   },
   {
     path: "animate",
-    component: AnimationLaxComponent
-  }
+    component: AnimationLaxComponent,
+  },
+  {
+    path: "textOutline",
+    component: TextOutlineComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class UiuxRoutingModule {}
