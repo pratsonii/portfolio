@@ -1,0 +1,34 @@
+<nav>
+  <div class="input-container">
+    <input type="text" placeholder="Search for...">
+    <i nz-icon nzType="search" nzTheme="outline"></i>
+  </div>
+
+  <div class="user-menu">
+    <nz-badge class="badge" [nzCount]="5">
+      <i nz-icon nzType="mail" nzTheme="fill"></i>
+    </nz-badge>
+    <nz-badge class="badge" [nzCount]="5">
+      <i nz-icon nzType="bell" nzTheme="fill"></i>
+    </nz-badge>
+    <i class="badge" nz-icon nzType="setting" nzTheme="outline"></i>
+
+    <img src="https://placeimg.com/30/30/people" alt="Avatar" class="avatar">
+
+    <a nz-dropdown [nzDropdownMenu]="menu">
+      Administrator
+      <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>Post</li>
+        <li nz-menu-item>Profile</li>
+        <li (click)="redirect()" nz-menu-item>Logout</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+
+</nav>
+<main>
+  <app-main-dashboard></app-main-dashboard>
+</main>

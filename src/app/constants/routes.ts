@@ -15,6 +15,11 @@ export class Routes {
 
   static readonly uiux = [
     {
+      name: "Full Page Dashboard",
+      path: "uiux/dashboard",
+      title: "Full Page Dashboard",
+    },
+    {
       name: "Animation on Scroll",
       path: "uiux/animate",
       title: "Animation using Laxx.js",

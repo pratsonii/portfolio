@@ -1,3 +1,4 @@
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { TextOutlineComponent } from "./components/text-outline/text-outline.component";
 import { LazyImageComponent } from "./components/lazy-image/lazy-image.component";
 import { AnimationLaxComponent } from "./components/animation-lax/animation-lax.component";
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "textOutline",
     component: TextOutlineComponent,
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent,
   },
 ];
 

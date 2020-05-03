@@ -18,11 +18,11 @@ import { NzMessageService } from "ng-zorro-antd";
   animations: [
     trigger("flyInOut", [
       transition(":enter", [
-        style({ transform: "translateX(100%)" }),
-        animate(350)
-      ])
-    ])
-  ]
+        style({ transform: "translateY(100%)" }),
+        animate(350),
+      ]),
+    ]),
+  ],
 })
 export class RegistrationComponent implements OnInit {
   validateForm: FormGroup;
@@ -40,7 +40,7 @@ export class RegistrationComponent implements OnInit {
       email: this.validateForm.get("email").value,
       password: this.validateForm.get("password").value,
       nickName: this.validateForm.get("nickname").value,
-      website: this.validateForm.get("website").value
+      website: this.validateForm.get("website").value,
     };
 
     this.validate(user);
@@ -52,7 +52,7 @@ export class RegistrationComponent implements OnInit {
     } else {
       this.store.dispatch(register(user));
       this.message.success("Registration successfull !", {
-        nzDuration: 3000
+        nzDuration: 3000,
       });
       setTimeout(() => {
         this.route.navigate(["/login"], { skipLocationChange: true });
@@ -61,7 +61,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   validate(user: User) {
-    this.users$.subscribe(x => {
+    this.users$.subscribe((x) => {
       for (let u of x) {
         if (u.email === user.email) {
           this.errorMessage = "User already exist !";
@@ -115,12 +115,12 @@ export class RegistrationComponent implements OnInit {
       phoneNumber: [null, [Validators.required]],
       website: [null, [Validators.required]],
       captcha: [null, [Validators.required]],
-      agree: [false]
+      agree: [false],
     });
     this.backNav.changeNavigation({
       route: "login",
       routeParam: "",
-      show: true
+      show: true,
     });
   }
 }
