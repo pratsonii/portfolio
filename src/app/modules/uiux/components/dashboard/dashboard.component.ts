@@ -1,6 +1,7 @@
 import { Router } from "@angular/router";
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { trigger, transition, style, animate } from "@angular/animations";
+declare const Waypoint: any;
 
 @Component({
   selector: "app-dashboard",
@@ -26,6 +27,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log("on in it");
+    // const way = new Waypoint({
+    //   element: document.getElementById("recent1"),
+    //   handler: function (direction) {
+    //     alert("trggered at " + this.triggerPoint);
+    //   },
+    //   offset: 150,
+    // });
+    // console.log(way);
   }
 }
